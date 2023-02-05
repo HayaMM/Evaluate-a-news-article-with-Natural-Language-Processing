@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>NLP</title>
+</head>
+
+<body>
+
+    <header></br></br></br>
+        <div class=""> News Article NLP </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Enter your article</h2>
+
+            <form class="">
+                <input id="name" type="text" name="input"
+                    value="https://www.researchgate.net/publication/331054979_The_Spectrum_of_Big_Data_Analytics"
+                    placeholder="url">
+                <input id="myButton" type="button" name="inputSubmit" value="send">
+            </form>
+        </section>
+
+        <section>
+            <h3>Result</h3></br></br>
+            <strong>Form Results:</strong></br>
+            <div id="results"></br>
+                <!-- information to be visible -->
+                <div id="polarity"></div>
+                <div id="textArticle"></div>
+                <div id="subjectivity"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> copyright &copy; 2023</p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
